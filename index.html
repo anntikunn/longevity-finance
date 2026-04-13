@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longevity Finance - 長寿時代の新経済インフラ | Next-Tech-Infrastructures</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0a0f1e',
+                            950: '#050a14',
+                        },
+                        silver: {
+                            DEFAULT: '#e2e8f0',
+                            bright: '#f8fafc',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(10, 15, 30, 0.8), rgba(10, 15, 30, 0.95)), url('hero.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .glossary-card {
+            border-left: 2px solid rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-navy-900 text-silver selection:bg-blue-500/30">
+    <div class="data-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 border-b border-white/5 bg-navy-950/80 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-2 h-8 bg-blue-500 rounded-full glow"></div>
+                <span class="font-display font-bold text-xl tracking-tighter uppercase text-gradient-silver">Longevity Finance</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-[10px] font-bold tracking-[0.2em] uppercase">
+                <a href="#concept" class="hover:text-blue-400 transition-colors">Concept</a>
+                <a href="#glossary" class="hover:text-blue-400 transition-colors">Glossary</a>
+                <a href="#innovation" class="hover:text-blue-400 transition-colors">Innovation</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+                <a href="../index.html" class="px-3 py-1 border border-blue-500/30 rounded hover:bg-blue-500 hover:text-white transition-all">HUB</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative">
+        <!-- Title Section -->
+        <!-- [TITLE] ここから内容開始 -->
+        <section id="title" class="min-h-screen flex items-center justify-center pt-20 hero-bg">
+            <div class="container mx-auto px-6 text-center">
+                <div class="inline-block px-4 py-1 border border-blue-500/20 rounded-full mb-8 pulse-bg bg-navy-950/50 backdrop-blur-sm">
+                    <span class="text-[10px] uppercase tracking-[0.5em] text-blue-400 font-bold">Research Portal // Longevity Finance</span>
+                </div>
+                <h1 class="font-display text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter leading-tight">
+                    <span class="text-cyber-glow">Longevity Finance</span><br>
+                    <span class="text-gradient-silver text-2xl md:text-4xl">長寿時代の新経済インフラ</span>
+                </h1>
+                <p class="max-w-2xl mx-auto text-silver/60 text-sm md:text-base font-light tracking-widest uppercase mb-12">
+                    REDEFINING WEALTH AND BIOLOGY THROUGH ADVANCED SOCIO-FINANCIAL INFRASTRUCTURE.
+                </p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <a href="#concept" class="btn-cyber">プロトコルへアクセス</a>
+                    <a href="#contact" class="text-xs font-bold tracking-widest text-silver/40 hover:text-white transition-colors">研究・調査依頼はこちら</a>
+                </div>
+            </div>
+        </section>
+        <!-- [TITLE] ここまで -->
+
+        <div class="cyber-hr"></div>
+
+        <!-- Concept Section -->
+        <!-- [CONCEPT] ここから内容開始 -->
+        <section id="concept" class="py-32 container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="w-12 h-1 bg-blue-500 mb-8"></div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-8 italic">Concept</h2>
+                    <p class="text-2xl md:text-4xl font-bold text-silver mb-8 leading-tight">
+                        「長生きを、リスクと呼ばせないために。」
+                    </p>
+                    <p class="text-lg md:text-xl text-silver/80 font-light leading-relaxed mb-8">
+                        日本が直面する人生100年時代の不安を、技術と金融の力で最高の幸運へと転換する。私たちは、個人の生命情報と経済的成長を同期させる、世界で初めてのインフラストラクチャを構築します。
+                    </p>
+                    <div class="premium-glass p-8 rounded-xl border-l-4 border-blue-500/50">
+                        <p class="text-sm text-silver/50 font-light">
+                            老いはもはや不可逆な宿命ではありません。私たちは、生物学的な若返りと、数世紀にも及ぶ資産のレジリエンスを同時に提供することで、人間の可能性を再定義します。
+                        </p>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="cyber-card p-1 rounded aspect-square flex items-center justify-center">
+                        <div class="w-full h-full border border-blue-500/10 rounded flex items-center justify-center relative overflow-hidden bg-navy-950/20">
+                             <div class="absolute inset-0 bg-blue-500/5 animate-pulse"></div>
+                             <span class="text-[12rem] font-bold text-white/5 select-none">LIFE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- [CONCEPT] ここまで -->
+
+        <div class="cyber-hr"></div>
+
+        <!-- Glossary Section -->
+        <!-- [GLOSSARY] ここから内容開始 -->
+        <section id="glossary" class="py-32 container mx-auto px-6 bg-navy-950/30">
+            <h2 class="font-display text-4xl font-bold mb-16 text-center italic tracking-widest uppercase">Glossary</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="cyber-card p-8 rounded-lg hover:border-blue-500/40 glossary-card">
+                    <h3 class="font-display font-bold text-lg text-blue-400 mb-2 uppercase tracking-wider">Longevity</h3>
+                    <p class="text-sm text-silver/60 leading-relaxed font-light mt-4">科学的アプローチによる健康寿命の最大化。</p>
+                </div>
+                <div class="cyber-card p-8 rounded-lg hover:border-blue-500/40 glossary-card">
+                    <h3 class="font-display font-bold text-lg text-blue-400 mb-2 uppercase tracking-wider">Geroscience</h3>
+                    <p class="text-sm text-silver/60 leading-relaxed font-light mt-4">老化を治療対象とする最新医学。細胞劣化の根本原因を特定し、介入します。</p>
+                </div>
+                <div class="cyber-card p-8 rounded-lg hover:border-blue-500/40 glossary-card">
+                    <h3 class="font-display font-bold text-lg text-blue-400 mb-2 uppercase tracking-wider">DeSci</h3>
+                    <p class="text-sm text-silver/60 leading-relaxed font-light mt-4">分散型サイエンス。Web3を活用し、透明性の高い研究投資とデータの共有を実現。</p>
+                </div>
+            </div>
+        </section>
+        <!-- [GLOSSARY] ここまで -->
+
+        <div class="cyber-hr"></div>
+
+        <!-- Technological Innovation Section -->
+        <!-- [INNOVATION] ここから内容開始 -->
+        <section id="innovation" class="py-32 container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="text-[10px] text-blue-500 font-bold uppercase tracking-widest">Technological Innovation</span>
+                    <h2 class="font-display text-4xl font-bold mt-4 italic">Core Disruptions</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-8">
+                    <div class="cyber-card p-10 rounded-2xl relative overflow-hidden group">
+                        <div class="flex items-start gap-6">
+                            <div class="text-blue-500 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.183.244l-.28.14a2 2 0 01-2.983-1.484V9.24a2 2 0 011.084-1.78l.358-.179a2 2 0 001.077-1.903l-.116-2.326a2 2 0 012.983-1.484l.28.14a2 2 0 001.183.244l2.536-.363a6 6 0 013.86-.517l.318-.158a6 6 0 013.86-.517l2.387.477a2 2 0 011.022.547l.14.7a2 2 0 002.505 1.583l2.366-.591a2 2 0 012.037 2.812l-.28.14a2 2 0 00-1.183.244l.363 2.536a2 2 0 01-1.022 1.547l-.7.14a2 2 0 00-1.583 2.505l.591 2.366a2 2 0 01-2.812 2.037l-.14-.28a2 2 0 00-.244-1.183l-2.536.363z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-xl mb-4 text-silver-bright italic">Biological Rejuvenation</h3>
+                                <p class="text-lg font-light text-silver/80 leading-relaxed">
+                                    エピジェネティック・リプログラミングによる細胞の若返り。老化により劣化・リセットされた細胞の「初期化」を可能にする医療インフラ。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cyber-card p-10 rounded-2xl relative overflow-hidden group">
+                        <div class="flex items-start gap-6">
+                            <div class="text-blue-500 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-display font-bold text-xl mb-4 text-silver-bright italic">Autonomous Wealth Engines</h3>
+                                <p class="text-lg font-light text-silver/80 leading-relaxed">
+                                    AI駆動型の超長期資産運用アルゴリズムの実装。数年から数十年単位ではなく、数世紀にわたる複利効果とリスクヘッジを自律管理。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- [INNOVATION] ここまで -->
+
+        <div class="cyber-hr"></div>
+
+        <!-- Contact Section -->
+        <!-- [CONTACT] ここから内容開始 -->
+        <section id="contact" class="py-32 container mx-auto px-6 text-center">
+            <h2 class="font-display text-5xl md:text-7xl font-black mb-12 uppercase tracking-tighter italic">Contact</h2>
+            <div class="max-w-2xl mx-auto cyber-card p-12 rounded-3xl border-blue-500/20">
+                <p class="text-xl text-silver/80 mb-12 font-light leading-relaxed">
+                    提携・調査依頼、およびインフラ活用に関するお問い合わせはこちらから。
+                </p>
+                <div class="space-y-4">
+                    <button class="btn-cyber w-full">お問い合わせを初期化する</button>
+                    <p class="text-[10px] text-silver/30 uppercase tracking-widest mt-6">Secure Institutional Channel // encrypted</p>
+                </div>
+            </div>
+        </section>
+        <!-- [CONTACT] ここまで -->
+    </main>
+
+    <footer class="py-12 border-t border-white/5 bg-navy-950">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center opacity-40">
+            <div class="text-xs font-bold tracking-widest uppercase mb-4 md:mb-0">Next-Tech-Infrastructures // Longevity Finance</div>
+            <div class="text-[10px] font-light">
+                &copy; 2026 Longevity Finance Institution. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

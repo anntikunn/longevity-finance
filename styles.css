@@ -1,0 +1,106 @@
+/* 
+  Next-Tech-Infrastructures 共通プレミアムスタイル
+  テーマ: Deep Cyber & Sophisticated
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700;900&display=swap');
+
+:root {
+    --bg-navy: #0a0f1e;
+    --accent-blue: #3b82f6; /* blue-500 */
+    --accent-cyan: #06b6d4; /* cyan-500 */
+    --text-silver: #e2e8f0; /* slate-200 */
+    --glass-border: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-navy);
+    color: var(--text-silver);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+/* Sophisticated Typography */
+.text-cyber-glow {
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.text-gradient-silver {
+    background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 50%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Deep Cyber Components */
+.cyber-card {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cyber-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
+    transform: translateY(-4px);
+}
+
+/* Subtle Data Grid Overlay */
+.data-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Sophisticated Buttons */
+.btn-cyber {
+    position: relative;
+    padding: 0.75rem 2rem;
+    background: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.btn-cyber:hover {
+    background: var(--accent-blue);
+    color: white;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Custom Horizontal Line for Sectioning */
+.cyber-hr {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
+    opacity: 0.2;
+    margin: 4rem 0;
+}
+
+/* Animations */
+@keyframes pulse-slow {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.2; }
+}
+
+.pulse-bg {
+    animation: pulse-slow 8s infinite ease-in-out;
+}
