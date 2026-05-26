@@ -9,19 +9,7 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles.css">
-    <!-- Mermaid.js CDN for interactive diagrams -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <script>
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: 'neutral',
-            securityLevel: 'loose',
-            flowchart: {
-                useMaxWidth: true,
-                htmlLabels: true
-            }
-        });
-    </script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -164,34 +152,7 @@
                 </p>
             </section>
 
-            <!-- Diagram 1 -->
-            <section class="mb-16 bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-100">
-                <h3 class="text-lg font-bold text-slate-800 mb-6 text-center">
-                    【視覚対比】「投資のみ」vs「保険あり」の資産推移イメージ
-                </h3>
-                <div class="mermaid flex justify-center bg-white p-4 rounded-xl border border-slate-200/60 shadow-sm">
-                    flowchart TD
-                        subgraph 投資のみの取り崩し（長生きがリスクになる）
-                            A1[リタイア時: 潤沢な資産] --> A2[取り崩し開始]
-                            A2 --> A3[市場の暴落リスク / 寿命の長期化]
-                            A3 --> A4{資産寿命 vs 実際の寿命}
-                            A4 -->|想定より長生きする| A5[❌ 資産枯渇: お金が尽きる恐怖を抱える]
-                        end
 
-                        subgraph 保険ありの取り崩し（長生きをギフトにする）
-                            B1[リタイア時: 資産 + 生存保険] --> B2[取り崩し + 一生年金]
-                            B2 --> B3[基礎生活費は生存保険が一生涯保証]
-                            B3 --> B4[余剰資産を安心して「今しかできない体験」に使い切る]
-                            B4 --> B5[⭕️ 資産ゼロで旅立つ / 人生を最大化]
-                        end
-
-                        classDef default fill:#ffffff,stroke:#cbd5e1,stroke-width:1px,color:#334155;
-                        classDef danger fill:#fee2e2,stroke:#fca5a5,stroke-width:1px,color:#991b1b;
-                        classDef success fill:#ccfbf1,stroke:#99f6e4,stroke-width:1px,color:#0f766e;
-                        class A5 danger;
-                        class B5 success;
-                </div>
-            </section>
 
             <!-- Section 2 -->
             <section class="mb-16">
@@ -264,38 +225,7 @@
                 </p>
             </section>
 
-            <!-- Diagram 2 -->
-            <section id="simulation" class="mb-16 bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-100">
-                <h3 class="text-lg font-bold text-slate-800 mb-6 text-center">
-                    【全体像】若い頃からリタイア後までの資金最適化イメージ
-                </h3>
-                <div class="mermaid flex justify-center bg-white p-4 rounded-xl border border-slate-200/60 shadow-sm overflow-x-auto">
-                    flowchart LR
-                        subgraph 資産形成期（20代〜50代）
-                            NISA[NISA / iDeCo]
-                            InsureReady[生存保険の積立]
-                            Text1["【資産の最大化】"]
-                        end
 
-                        subgraph リタイア準備期（50代〜）
-                            FP[FP相談でキャッシュフローを可視化]
-                            Text2["【人生の最適化設計】"]
-                        end
-
-                        subgraph リタイア期（60代〜）
-                            Base[生存保険: 一生涯のベース生活費を保証]
-                            Use[余剰資産: 体験・思い出づくりに使い切る]
-                            Text3["【人生の最大化】"]
-                        end
-
-                        NISA & InsureReady --> FP
-                        FP --> Base & Use
-
-                        classDef default fill:#ffffff,stroke:#cbd5e1,stroke-width:1px,color:#334155;
-                        classDef textClass fill:none,stroke:none,color:#0d9488,font-weight:bold;
-                        class Text1,Text2,Text3 textClass;
-                </div>
-            </section>
 
             <!-- Section 4 -->
             <section class="mb-16">
