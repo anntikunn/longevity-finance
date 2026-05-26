@@ -1,106 +1,110 @@
 /* 
-  Next-Tech-Infrastructures 共通プレミアムスタイル
-  テーマ: Deep Cyber & Sophisticated
+  Next-Tech-Infrastructures Premium Stylesheet
+  Theme: Clean Financial & Sophisticated Innovation (Light Mode)
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Outfit:wght@400;600;700;900&display=swap');
 
 :root {
-    --bg-navy: #0a0f1e;
-    --accent-blue: #3b82f6; /* blue-500 */
-    --accent-cyan: #06b6d4; /* cyan-500 */
-    --text-silver: #e2e8f0; /* slate-200 */
-    --glass-border: rgba(255, 255, 255, 0.05);
+    --bg-main: #ffffff;
+    --bg-alt: #f8fafc;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --accent-teal: #0d9488;
+    --accent-teal-dark: #0f766e;
+    --accent-indigo: #4f46e5;
+    --btn-orange: #ea580c;
+    --btn-orange-hover: #c2410c;
+    --border-color: #e2e8f0;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-navy);
-    color: var(--text-silver);
-    line-height: 1.6;
-    overflow-x: hidden;
+    font-family: 'Noto Sans JP', 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-secondary);
+    line-height: 1.75;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.02em;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Outfit', sans-serif;
-    letter-spacing: -0.02em;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Noto Sans JP', sans-serif;
+    color: var(--text-primary);
+    font-weight: 700;
 }
 
-/* Sophisticated Typography */
-.text-cyber-glow {
-    text-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
-}
-
-.text-gradient-silver {
-    background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 50%, #94a3b8 100%);
+.text-gradient-teal {
+    background: linear-gradient(135deg, var(--accent-indigo) 0%, var(--accent-teal) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* Deep Cyber Components */
-.cyber-card {
-    background: rgba(15, 23, 42, 0.6);
+/* プレミアムなガラスモルフィズム風カード（ライトモード） */
+.premium-card {
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.cyber-card:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
-    transform: translateY(-4px);
+.premium-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(13, 148, 136, 0.08);
+    border-color: rgba(13, 148, 136, 0.3);
 }
 
-/* Subtle Data Grid Overlay */
-.data-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
+/* CTAボタン */
+.btn-cta {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--btn-orange) 0%, var(--btn-orange-hover) 100%);
+    color: #ffffff !important;
+    font-weight: 700;
+    padding: 1.25rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(234, 88, 12, 0.4);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.6);
+}
+
+.btn-cta:active {
+    transform: translateY(0);
+}
+
+/* 区切り線 */
+.cyber-hr {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    margin: 4rem 0;
+}
+
+/* 装飾グラフィックス */
+.blob-bg {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(13, 148, 136, 0.05) 0%, rgba(79, 70, 229, 0.05) 50%, transparent 100%);
+    filter: blur(40px);
     z-index: -1;
     pointer-events: none;
 }
 
-/* Sophisticated Buttons */
-.btn-cyber {
-    position: relative;
-    padding: 0.75rem 2rem;
-    background: transparent;
-    border: 1px solid var(--accent-blue);
-    color: var(--accent-blue);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.75rem;
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
-
-.btn-cyber:hover {
-    background: var(--accent-blue);
-    color: white;
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
-}
-
-/* Custom Horizontal Line for Sectioning */
-.cyber-hr {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--accent-blue), transparent);
-    opacity: 0.2;
-    margin: 4rem 0;
-}
-
-/* Animations */
-@keyframes pulse-slow {
-    0%, 100% { opacity: 0.1; }
-    50% { opacity: 0.2; }
-}
-
-.pulse-bg {
-    animation: pulse-slow 8s infinite ease-in-out;
+/* スマホ対応調整 */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.7;
+    }
 }

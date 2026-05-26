@@ -3,26 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Longevity Finance - 長寿時代の新経済インフラ | Next-Tech-Infrastructures</title>
+    <title>「長寿」を人生最高のギフトにするマネー戦略 | Longevity Finance</title>
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="『DIE WITH ZERO』の実践者が直面する長生きリスク。資産寿命の不安を解消し、お金を今しかできない体験に安心して使い切るための、生存保険（個人年金）を活用した最新の資産設計について解説します。">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./styles.css">
+    <!-- Mermaid.js CDN for interactive diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral',
+            securityLevel: 'loose',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true
+            }
+        });
+    </script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         navy: {
-                            900: '#0a0f1e',
-                            950: '#050a14',
+                            50: '#f8fafc',
+                            900: '#0f172a',
                         },
-                        silver: {
-                            DEFAULT: '#e2e8f0',
-                            bright: '#f8fafc',
+                        teal: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#0d9488',
+                            600: '#0f766e',
+                        },
+                        orange: {
+                            500: '#f97316',
+                            600: '#ea580c',
                         }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Noto Sans JP', 'Yu Gothic', 'sans-serif'],
                         display: ['Outfit', 'sans-serif'],
                     }
                 }
@@ -30,184 +51,344 @@
         }
     </script>
     <style>
-        .hero-bg {
-            background: linear-gradient(rgba(10, 15, 30, 0.8), rgba(10, 15, 30, 0.95)), url('hero.png');
-            background-size: cover;
-            background-position: center;
+        .hero-decoration-1 {
+            top: -10%;
+            left: -10%;
         }
-        .glossary-card {
-            border-left: 2px solid rgba(59, 130, 246, 0.5);
+        .hero-decoration-2 {
+            bottom: -10%;
+            right: -10%;
+        }
+        .article-content blockquote {
+            position: relative;
+            background-color: #f8fafc;
+            border-left: 4px solid #0d9488;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
         }
     </style>
 </head>
-<body class="bg-navy-900 text-silver selection:bg-blue-500/30">
-    <div class="data-overlay"></div>
+<body class="bg-slate-50/50 text-slate-700 selection:bg-teal-500/20 antialiased">
+
+    <!-- Decoration Background Blobs -->
+    <div class="blob-bg hero-decoration-1"></div>
+    <div class="blob-bg hero-decoration-2"></div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 border-b border-white/5 bg-navy-950/80 backdrop-blur-md">
+    <nav class="fixed w-full z-50 border-b border-slate-100 bg-white/85 backdrop-blur-md">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="w-2 h-8 bg-blue-500 rounded-full glow"></div>
-                <span class="font-display font-bold text-xl tracking-tighter uppercase text-gradient-silver">Longevity Finance</span>
+                <div class="w-2.5 h-8 bg-gradient-to-b from-indigo-600 to-teal-500 rounded-full"></div>
+                <span class="font-display font-extrabold text-xl tracking-tighter uppercase text-gradient-teal">Longevity Finance</span>
             </div>
-            <div class="hidden md:flex space-x-8 text-[10px] font-bold tracking-[0.2em] uppercase">
-                <a href="#concept" class="hover:text-blue-400 transition-colors">Concept</a>
-                <a href="#glossary" class="hover:text-blue-400 transition-colors">Glossary</a>
-                <a href="#innovation" class="hover:text-blue-400 transition-colors">Innovation</a>
-                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
-                <a href="../index.html" class="px-3 py-1 border border-blue-500/30 rounded hover:bg-blue-500 hover:text-white transition-all">HUB</a>
+            <div class="hidden md:flex space-x-8 text-xs font-bold tracking-[0.15em] uppercase text-slate-500">
+                <a href="#article" class="hover:text-teal-600 transition-colors">Article</a>
+                <a href="#simulation" class="hover:text-teal-600 transition-colors">Simulation</a>
+                <a href="#cta-section" class="hover:text-teal-600 transition-colors">Consultation</a>
             </div>
         </div>
     </nav>
 
-    <main class="relative">
-        <!-- Title Section -->
-        <!-- [TITLE] ここから内容開始 -->
-        <section id="title" class="min-h-screen flex items-center justify-center pt-20 hero-bg">
-            <div class="container mx-auto px-6 text-center">
-                <div class="inline-block px-4 py-1 border border-blue-500/20 rounded-full mb-8 pulse-bg bg-navy-950/50 backdrop-blur-sm">
-                    <span class="text-[10px] uppercase tracking-[0.5em] text-blue-400 font-bold">Research Portal // Longevity Finance</span>
-                </div>
-                <h1 class="font-display text-4xl md:text-7xl font-black mb-6 uppercase tracking-tighter leading-tight">
-                    <span class="text-cyber-glow">Longevity Finance</span><br>
-                    <span class="text-gradient-silver text-2xl md:text-4xl">長寿時代の新経済インフラ</span>
-                </h1>
-                <p class="max-w-2xl mx-auto text-silver/60 text-sm md:text-base font-light tracking-widest uppercase mb-12">
-                    REDEFINING WEALTH AND BIOLOGY THROUGH ADVANCED SOCIO-FINANCIAL INFRASTRUCTURE.
-                </p>
-                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                    <a href="#concept" class="btn-cyber">プロトコルへアクセス</a>
-                    <a href="#contact" class="text-xs font-bold tracking-widest text-silver/40 hover:text-white transition-colors">研究・調査依頼はこちら</a>
-                </div>
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 bg-gradient-to-b from-white to-transparent">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <div class="inline-block px-4 py-1.5 bg-teal-50 border border-teal-100 rounded-full mb-6">
+                <span class="text-xs uppercase tracking-widest text-teal-600 font-bold">Special Report // 人生最大化マネー戦略</span>
             </div>
-        </section>
-        <!-- [TITLE] ここまで -->
+            <h1 class="font-sans text-3xl md:text-5xl font-black mb-8 text-slate-900 leading-tight tracking-tight">
+                「長寿」を人生最高のギフトにする<br class="hidden md:inline">マネー戦略
+            </h1>
+            <p class="max-w-2xl mx-auto text-slate-500 text-base md:text-lg font-normal leading-relaxed">
+                資産寿命の不安を解消し、安心して今を豊かに生きるためのルール
+            </p>
+        </div>
+    </header>
 
-        <div class="cyber-hr"></div>
+    <div class="max-w-[800px] mx-auto px-6">
+        <hr class="border-slate-100 my-8">
+    </div>
 
-        <!-- Concept Section -->
-        <!-- [CONCEPT] ここから内容開始 -->
-        <section id="concept" class="py-32 container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-                <div class="order-2 lg:order-1">
-                    <div class="w-12 h-1 bg-blue-500 mb-8"></div>
-                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-8 italic">Concept</h2>
-                    <p class="text-2xl md:text-4xl font-bold text-silver mb-8 leading-tight">
-                        「長生きを、リスクと呼ばせないために。」
+    <!-- Main Content Area -->
+    <main id="article" class="pb-32">
+        <article class="max-w-[800px] mx-auto px-6 bg-white py-12 md:py-20 rounded-3xl border border-slate-100 shadow-sm/50 article-content">
+            
+            <!-- Section 1 -->
+            <section class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 flex items-center">
+                    <span class="w-1.5 h-7 bg-teal-500 rounded-full mr-3.5 inline-block"></span>
+                    1. はじめに：なぜ私たちは、お金を使い切るのが怖いのか？
+                </h2>
+                
+                <blockquote>
+                    <p class="text-slate-800 font-medium text-lg leading-relaxed mb-2">
+                        「人生で最も大切なのは、富を最大化することではなく、人生を最大化することだ」
                     </p>
-                    <p class="text-lg md:text-xl text-silver/80 font-light leading-relaxed mb-8">
-                        日本が直面する人生100年時代の不安を、技術と金融の力で最高の幸運へと転換する。私たちは、個人の生命情報と経済的成長を同期させる、世界で初めてのインフラストラクチャを構築します。
-                    </p>
-                    <div class="premium-glass p-8 rounded-xl border-l-4 border-blue-500/50">
-                        <p class="text-sm text-silver/50 font-light">
-                            老いはもはや不可逆な宿命ではありません。私たちは、生物学的な若返りと、数世紀にも及ぶ資産のレジリエンスを同時に提供することで、人間の可能性を再定義します。
-                        </p>
-                    </div>
-                </div>
-                <div class="order-1 lg:order-2">
-                    <div class="cyber-card p-1 rounded aspect-square flex items-center justify-center">
-                        <div class="w-full h-full border border-blue-500/10 rounded flex items-center justify-center relative overflow-hidden bg-navy-950/20">
-                             <div class="absolute inset-0 bg-blue-500/5 animate-pulse"></div>
-                             <span class="text-[12rem] font-bold text-white/5 select-none">LIFE</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- [CONCEPT] ここまで -->
+                    <cite class="text-sm text-slate-500 not-italic block mt-2 text-right">
+                        ―― ビル・パーキンス著『DIE WITH ZERO』より
+                    </cite>
+                </blockquote>
 
-        <div class="cyber-hr"></div>
-
-        <!-- Glossary Section -->
-        <!-- [GLOSSARY] ここから内容開始 -->
-        <section id="glossary" class="py-32 container mx-auto px-6 bg-navy-950/30">
-            <h2 class="font-display text-4xl font-bold mb-16 text-center italic tracking-widest uppercase">Glossary</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="cyber-card p-8 rounded-lg hover:border-blue-500/40 glossary-card">
-                    <h3 class="font-display font-bold text-lg text-blue-400 mb-2 uppercase tracking-wider">Longevity</h3>
-                    <p class="text-sm text-silver/60 leading-relaxed font-light mt-4">科学的アプローチによる健康寿命の最大化。</p>
-                </div>
-                <div class="cyber-card p-8 rounded-lg hover:border-blue-500/40 glossary-card">
-                    <h3 class="font-display font-bold text-lg text-blue-400 mb-2 uppercase tracking-wider">Geroscience</h3>
-                    <p class="text-sm text-silver/60 leading-relaxed font-light mt-4">老化を治療対象とする最新医学。細胞劣化の根本原因を特定し、介入します。</p>
-                </div>
-                <div class="cyber-card p-8 rounded-lg hover:border-blue-500/40 glossary-card">
-                    <h3 class="font-display font-bold text-lg text-blue-400 mb-2 uppercase tracking-wider">DeSci</h3>
-                    <p class="text-sm text-silver/60 leading-relaxed font-light mt-4">分散型サイエンス。Web3を活用し、透明性の高い研究投資とデータの共有を実現。</p>
-                </div>
-            </div>
-        </section>
-        <!-- [GLOSSARY] ここまで -->
-
-        <div class="cyber-hr"></div>
-
-        <!-- Technological Innovation Section -->
-        <!-- [INNOVATION] ここから内容開始 -->
-        <section id="innovation" class="py-32 container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16">
-                    <span class="text-[10px] text-blue-500 font-bold uppercase tracking-widest">Technological Innovation</span>
-                    <h2 class="font-display text-4xl font-bold mt-4 italic">Core Disruptions</h2>
-                </div>
-                <div class="grid grid-cols-1 gap-8">
-                    <div class="cyber-card p-10 rounded-2xl relative overflow-hidden group">
-                        <div class="flex items-start gap-6">
-                            <div class="text-blue-500 mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.183.244l-.28.14a2 2 0 01-2.983-1.484V9.24a2 2 0 011.084-1.78l.358-.179a2 2 0 001.077-1.903l-.116-2.326a2 2 0 012.983-1.484l.28.14a2 2 0 001.183.244l2.536-.363a6 6 0 013.86-.517l.318-.158a6 6 0 013.86-.517l2.387.477a2 2 0 011.022.547l.14.7a2 2 0 002.505 1.583l2.366-.591a2 2 0 012.037 2.812l-.28.14a2 2 0 00-1.183.244l.363 2.536a2 2 0 01-1.022 1.547l-.7.14a2 2 0 00-1.583 2.505l.591 2.366a2 2 0 01-2.812 2.037l-.14-.28a2 2 0 00-.244-1.183l-2.536.363z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-display font-bold text-xl mb-4 text-silver-bright italic">Biological Rejuvenation</h3>
-                                <p class="text-lg font-light text-silver/80 leading-relaxed">
-                                    エピジェネティック・リプログラミングによる細胞の若返り。老化により劣化・リセットされた細胞の「初期化」を可能にする医療インフラ。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cyber-card p-10 rounded-2xl relative overflow-hidden group">
-                        <div class="flex items-start gap-6">
-                            <div class="text-blue-500 mt-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="font-display font-bold text-xl mb-4 text-silver-bright italic">Autonomous Wealth Engines</h3>
-                                <p class="text-lg font-light text-silver/80 leading-relaxed">
-                                    AI駆動型の超長期資産運用アルゴリズムの実装。数年から数十年単位ではなく、数世紀にわたる複利効果とリスクヘッジを自律管理。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- [INNOVATION] ここまで -->
-
-        <div class="cyber-hr"></div>
-
-        <!-- Contact Section -->
-        <!-- [CONTACT] ここから内容開始 -->
-        <section id="contact" class="py-32 container mx-auto px-6 text-center">
-            <h2 class="font-display text-5xl md:text-7xl font-black mb-12 uppercase tracking-tighter italic">Contact</h2>
-            <div class="max-w-2xl mx-auto cyber-card p-12 rounded-3xl border-blue-500/20">
-                <p class="text-xl text-silver/80 mb-12 font-light leading-relaxed">
-                    提携・調査依頼、およびインフラ活用に関するお問い合わせはこちらから。
+                <p class="mb-6">
+                    この言葉に触れたとき、私は深く考えさせられました。私たちはつい、将来への不安から「お金を貯めること・増やすこと」ばかりに目を奪われがちです。しかし、人生という限られた時間の中で本当に価値があるのは、お金そのものではなく、そこから得られる豊かな経験や、大切な人との思い出のはずです。
                 </p>
-                <div class="space-y-4">
-                    <a href="mailto:info@longevityfinance.jp?subject=【お問い合わせ】Longevity Finance" class="btn-cyber block w-full">お問い合わせ</a>
-                    <p class="text-[10px] text-silver/30 uppercase tracking-widest mt-6">Direct Email: info@longevityfinance.jp // encrypted</p>
+
+                <p class="mb-6">
+                    しかし、この素晴らしい思想に共感しつつも、いざ実践しようとすると、心の中に次のような「ブレーキ」がかかりませんか？
+                </p>
+
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-100 mb-8 space-y-3">
+                    <p class="text-slate-600 italic pl-4 border-l-2 border-slate-300">
+                        「もし、お金を使い切った後に、想定外に長生きしてしまったらどうしよう……」
+                    </p>
+                    <p class="text-slate-600 italic pl-4 border-l-2 border-slate-300">
+                        「老後資金が底を突く恐怖を抱えながら生きるのは嫌だ」
+                    </p>
                 </div>
-            </div>
-        </section>
-        <!-- [CONTACT] ここまで -->
+
+                <p class="mb-6">
+                    私たちが本能的に抱くこの不安は、極めて真っ当です。なぜなら、<strong>私たちは「自分が何歳で死ぬか」を事前に知ることができないから</strong>です。
+                </p>
+
+                <p class="mb-6">
+                    しかし、少し視点を変えてみてください。「長生きはお金がかかる」という不安は、見方を変えれば<strong>「それだけ長く人生を楽しめる可能性、思い出を増やすチャンスが残されている」</strong>ということです。
+                </p>
+
+                <p class="mb-6">
+                    もし、お金が尽きる心配を完全に消し去ることができたら？ 
+                    長寿は「リスク（脅威）」から、あなたの人生を豊かにするための「最高の資産（可能性）」へと姿を変えるはずです。
+                </p>
+
+                <p class="mb-12">
+                    今回は、お金の不安を解消し、『DIE WITH ZERO』を本当の意味で実現するための「長寿時代の資産設計」について探っていきます。
+                </p>
+            </section>
+
+            <!-- Diagram 1 -->
+            <section class="mb-16 bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-100">
+                <h3 class="text-lg font-bold text-slate-800 mb-6 text-center">
+                    【視覚対比】「投資のみ」vs「保険あり」の資産推移イメージ
+                </h3>
+                <div class="mermaid flex justify-center bg-white p-4 rounded-xl border border-slate-200/60 shadow-sm">
+                    flowchart TD
+                        subgraph 投資のみの取り崩し（長生きがリスクになる）
+                            A1[リタイア時: 潤沢な資産] --> A2[取り崩し開始]
+                            A2 --> A3[市場の暴落リスク / 寿命の長期化]
+                            A3 --> A4{資産寿命 vs 実際の寿命}
+                            A4 -->|想定より長生きする| A5[❌ 資産枯渇: お金が尽きる恐怖を抱える]
+                        end
+
+                        subgraph 保険ありの取り崩し（長生きをギフトにする）
+                            B1[リタイア時: 資産 + 生存保険] --> B2[取り崩し + 一生年金]
+                            B2 --> B3[基礎生活費は生存保険が一生涯保証]
+                            B3 --> B4[余剰資産を安心して「今しかできない体験」に使い切る]
+                            B4 --> B5[⭕️ 資産ゼロで旅立つ / 人生を最大化]
+                        end
+
+                        classDef default fill:#ffffff,stroke:#cbd5e1,stroke-width:1px,color:#334155;
+                        classDef danger fill:#fee2e2,stroke:#fca5a5,stroke-width:1px,color:#991b1b;
+                        classDef success fill:#ccfbf1,stroke:#99f6e4,stroke-width:1px,color:#0f766e;
+                        class A5 danger;
+                        class B5 success;
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 flex items-center">
+                    <span class="w-1.5 h-7 bg-teal-500 rounded-full mr-3.5 inline-block"></span>
+                    2. 投資運用だけでは見えない「寿命が尽きるまでの確実性」
+                </h2>
+
+                <p class="mb-6">
+                    近年、NISA（少額投資非課税制度）やiDeCo（個人型確定拠出年金）の普及により、インデックス投資などで資産を「増やす」取り組みを始めている方は非常に増えています。
+                </p>
+
+                <p class="mb-6">
+                    もちろん、長期的な資産形成において投資信託や株式の運用は欠かせません。しかし、投資による運用だけを頼りに「人生を使い切る」設計をすることには、大きな盲点が存在します。
+                </p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">① 「取り崩し期」に訪れる市場の暴落リスク</h3>
+                <p class="mb-6">
+                    現役時代は、株価が下がっても「買い増しのチャンス」と捉えることができます。しかし、いざリタイアして資産を取り崩すフェーズに入った時、もし市場が大暴落したらどうなるでしょうか？
+                    資産価値が目減りする中で、生活費のために株式を売却し続けなければならない恐怖――これは「収益率の順序リスク（シーケンス・オブ・リターン・リスク）」と呼ばれ、どれだけロジカルな投資家であっても精神的に大きなストレスとなります。
+                </p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">② 資産寿命と人間寿命のミスマッチ</h3>
+                <p class="mb-6">
+                    「80歳で資産がゼロになるように計画的にお金を使ってきたが、気がつけば85歳になっても健康でピンピンしている」
+                    このような事態になったとき、残された人生をどのように過ごせばよいのでしょうか。投資運用は「平均的な期待値」をもたらしてくれますが、「あなたが生きている限り、毎月必ずお金を供給し続ける」という<strong>絶対的な時間軸での確実性</strong>は保証してくれません。
+                </p>
+
+                <p class="mb-6">
+                    私たちが『DIE WITH ZERO』を実現するために本当に必要なのは、資産を限界まで増やすゲームを続けることではなく、<strong>「自分の寿命が尽きるその日まで、毎月決まった額が口座に振り込まれ続ける『終わりのない確実性』」</strong>なのです。
+                </p>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 flex items-center">
+                    <span class="w-1.5 h-7 bg-teal-500 rounded-full mr-3.5 inline-block"></span>
+                    3. 「生存保険（個人年金）」が長生きをリスクから資産に変える
+                </h2>
+
+                <p class="mb-6">
+                    では、その「終わりのない確実性」をどうやって手に入れればよいのでしょうか？
+                    ここで重要な役割を果たすのが、金融教育においてもしばしば見落とされがちな<strong>「生存保険（個人年金保険など）」</strong>という選択肢です。
+                </p>
+
+                <p class="mb-6">
+                    多くの人は「保険」と聞くと、死亡時に家族にお金を残すための「死亡保険」や、病気に備える「医療保険」を思い浮かべるでしょう。しかし、生存保険は文字通り<strong>「生きていること（長生きすること）」に対して給付が行われる仕組み</strong>です。
+                </p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">長生きするほど価値が高まる「トンチン性」の仕組み</h3>
+                <p class="mb-6">
+                    生存保険や終身年金の一部には、「途中で亡くなった人の未払い分の原資を、長生きしている生存者に手厚く分配する」という仕組み（トンチン性）が取り入れられています。
+                </p>
+
+                <p class="mb-6">この仕組みの最大のメリットは、以下の点にあります。</p>
+                <ul class="list-disc pl-6 mb-8 space-y-3">
+                    <li><strong>一生涯のキャッシュフロー</strong>: 自分が何歳まで生きようとも（たとえ100歳、110歳になろうとも）、生存している限り、約束された年金が毎月（または毎年）受け取れます。</li>
+                    <li><strong>長寿が「リターン」になる</strong>: 普通の投資では長生きは「資金枯渇のリスク」になりますが、生存保険においては「生きれば生きるほど、受け取る総額が増えて得をする（＝資産になる）」という関係性に逆転します。</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">『DIE WITH ZERO』との完璧なシナジー</h3>
+                <p class="mb-6">
+                    「死ぬまで毎月、確実に最低限（あるいはそれ以上）の生活費が振り込まれる」という絶対的な安心の土台（ベース）があれば、どうなるでしょうか？
+                </p>
+                <p class="mb-6">
+                    手元にある他の流動資産（NISAの投資信託や預貯金など）を、安心して「今しかできない体験」や「大切な人との思い出作り」、あるいは「早期の自己投資」へと大胆に使い切ることができるようになります。
+                </p>
+                <p class="mb-6">
+                    生存保険は、単なる「老後の生活費の足し」ではありません。あなたの人生の最もエネルギーのある時期に、<strong>お金を後腐れなく、豊かに使い切るための「心のパスポート」</strong>なのです。
+                </p>
+            </section>
+
+            <!-- Diagram 2 -->
+            <section id="simulation" class="mb-16 bg-slate-50 p-6 md:p-8 rounded-2xl border border-slate-100">
+                <h3 class="text-lg font-bold text-slate-800 mb-6 text-center">
+                    【全体像】若い頃からリタイア後までの資金最適化イメージ
+                </h3>
+                <div class="mermaid flex justify-center bg-white p-4 rounded-xl border border-slate-200/60 shadow-sm overflow-x-auto">
+                    flowchart LR
+                        subgraph 資産形成期（20代〜50代）
+                            NISA[NISA / iDeCo]
+                            InsureReady[生存保険の積立]
+                            Text1["【資産の最大化】"]
+                        end
+
+                        subgraph リタイア準備期（50代〜）
+                            FP[FP相談でキャッシュフローを可視化]
+                            Text2["【人生の最適化設計】"]
+                        end
+
+                        subgraph リタイア期（60代〜）
+                            Base[生存保険: 一生涯のベース生活費を保証]
+                            Use[余剰資産: 体験・思い出づくりに使い切る]
+                            Text3["【人生の最大化】"]
+                        end
+
+                        NISA & InsureReady --> FP
+                        FP --> Base & Use
+
+                        classDef default fill:#ffffff,stroke:#cbd5e1,stroke-width:1px,color:#334155;
+                        classDef textClass fill:none,stroke:none,color:#0d9488,font-weight:bold;
+                        class Text1,Text2,Text3 textClass;
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-8 flex items-center">
+                    <span class="w-1.5 h-7 bg-teal-500 rounded-full mr-3.5 inline-block"></span>
+                    4. あなただけの「長寿シミュレーション」を作ろう
+                </h2>
+
+                <p class="mb-6">
+                    生存保険や個人年金の重要性をご理解いただけたかと思いますが、ここで注意しなければならない点があります。それは、<strong>「すべての人に合う万能な保険商品は存在しない」</strong>ということです。
+                </p>
+
+                <ul class="list-disc pl-6 mb-8 space-y-2 text-slate-600">
+                    <li>あなたが何歳でリタイアしたいのか？</li>
+                    <li>現在の資産状況やNISA・iDeCoの積立状況は？</li>
+                    <li>公的年金は将来どのくらいもらえる見込みなのか？</li>
+                    <li>どのような老後生活（旅行、趣味、居住地）を望んでいるのか？</li>
+                </ul>
+
+                <p class="mb-6">
+                    これらの変数によって、必要な生存保険の金額や、選ぶべき保険商品のタイプ（円建て・外貨建て、変額・定額など）は180度変わります。
+                </p>
+
+                <p class="mb-6">
+                    ネット上の簡易シミュレーターや、知人の口コミだけで判断し加入することは非常に危険です。税制上の優遇措置や、他の資産運用との最適なバランスを考慮した、あなただけの「ポートフォリオ」を組む必要があります。
+                </p>
+
+                <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">プロのFP（ファイナンシャルプランナー）を賢く活用する</h3>
+                <p class="mb-6">
+                    そこで推奨したいのが、金融・保険・ライフプランニングのプロフェッショナルである<strong>FP（ファイナンシャルプランナー）への無料相談</strong>です。
+                </p>
+
+                <p class="mb-6">
+                    プロのFPは、あなたの現在の家計や資産状況をヒアリングした上で、以下のような「自分専用のキャッシュフロー表（シミュレーション）」を作成してくれます。
+                </p>
+
+                <ol class="list-decimal pl-6 mb-8 space-y-3">
+                    <li><strong>現状のまま進んだ場合の「資産寿命」の可視化</strong></li>
+                    <li><strong>生存保険を組み合わせることで、どれだけ「自由に使えるお金」が増えるかの検証</strong></li>
+                    <li><strong>数ある保険会社の商品の中から、手数料や返戻率が最も有利なプランの比較提示</strong></li>
+                </ol>
+
+                <p class="mb-6">
+                    『DIE WITH ZERO』の著者ビル・パーキンスも、人生を最適化するためにはプロの知恵を借りことの重要性を説いています。自分一人で頭を悩ませるのではなく、まずは中立的な視点からアドバイスをくれる専門家に相談してみることから始めてみませんか？
+                </p>
+
+                <p class="mb-12">
+                    あなたの人生をリスクから解放し、本当の意味で今を豊かに生きるための第一歩を踏み出しましょう。
+                </p>
+            </section>
+
+            <!-- CTA Section -->
+            <section id="cta-section" class="bg-teal-50/50 border border-teal-100/80 p-8 md:p-12 rounded-3xl text-center my-12">
+                <h3 class="text-xl md:text-2xl font-bold text-slate-900 mb-6">
+                    安心の人生最大化設計を、プロと共にはじめませんか？
+                </h3>
+                
+                <p class="text-sm md:text-base text-slate-600 mb-8 max-w-xl mx-auto leading-relaxed text-left md:text-center">
+                    「なぜ無料で相談できるのか？」と不思議に思うかもしれません。それは、FP相談窓口が保険会社から紹介手数料を受け取って運営されているからです。つまり、相談する私たち利用者は、プロの知見を無料で借りて、自分に最適なプランを比較できるという『いいとこ取り』ができるのです。損をする心配はありませんので、まずは気軽に活用してみてください。
+                </p>
+
+                <div class="mt-8">
+                    <a href="https://example.com/fp-consultation-affiliate" class="btn-cta block md:inline-block w-full md:w-auto text-center text-lg py-4 px-8 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300">
+                        【無料】プロのFPによるライフプラン＆長寿シミュレーションの作成はこちら
+                    </a>
+                </div>
+                
+                <p class="text-xs text-slate-400 mt-6 tracking-wide">
+                    ※外部サイトへ遷移します。相談は完全無料です。
+                </p>
+            </section>
+
+            <!-- Disclaimer Section -->
+            <section class="text-xs text-slate-400 mt-16 pt-8 border-t border-slate-100">
+                <h4 class="font-bold mb-4">5. 免責事項・ご注意点</h4>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>本記事で紹介している生存保険（個人年金保険等）は、特定の保険商品の勧誘や推奨を目的としたものではありません。</li>
+                    <li>金融商品・保険商品へのご加入や投資のご判断は、読者様ご自身の責任において行っていただきますようお願いいたします。</li>
+                    <li>各種保険商品には、契約初期費用や信託報酬、解約時の手数料（解約控除）などがかかる場合があります。また、外貨建て商品には為替リスクが存在します。</li>
+                    <li>詳細な保障内容、不利益事項、手数料等については、必ず各保険会社が発行する「パンフレット」「重要事項説明書（契約概要・注意喚起情報）」「ご契約のしおり・約款」を事前によくご確認ください。</li>
+                </ul>
+            </section>
+
+        </article>
     </main>
 
-    <footer class="py-12 border-t border-white/5 bg-navy-950">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center opacity-40">
-            <div class="text-xs font-bold tracking-widest uppercase mb-4 md:mb-0">Next-Tech-Infrastructures // Longevity Finance</div>
-            <div class="text-[10px] font-light">
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-100 bg-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center opacity-60 max-w-4xl">
+            <div class="text-xs font-bold tracking-widest uppercase mb-4 md:mb-0 text-slate-500">
+                Next-Tech-Infrastructures // Longevity Finance
+            </div>
+            <div class="text-[10px] text-slate-400">
                 &copy; 2026 Longevity Finance Institution. All Rights Reserved.
             </div>
         </div>
